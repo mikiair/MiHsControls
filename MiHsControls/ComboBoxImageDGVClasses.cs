@@ -38,6 +38,9 @@ namespace MiHsControls
         }
     }
 
+    /// <summary>
+    /// Specialized DataGridViewComboBoxCell which lets user select from a list of images and displays a selected image when not in edit mode
+    /// </summary>
     internal class ComboBoxImageCell : DataGridViewComboBoxCell
     {
         private ImageList imageList;
@@ -50,7 +53,7 @@ namespace MiHsControls
                 if (imageList != value)
                 {
                     imageList = value;
-                    // TODO update image display
+                    // TODO ComboBoxImageDGVClasses/ComboBoxImageCell: update image display when ImageList is set
                 }
             }
         }
@@ -104,6 +107,9 @@ namespace MiHsControls
         }
     }
 
+    /// <summary>
+    /// Represents a ComboBox which is used as editing control
+    /// </summary>
     internal class ComboBoxImageEditingControl : ComboBox, IDataGridViewEditingControl
     {
         public ComboBoxImageEditingControl() : this(null)
